@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dry Oar - Contact Us</title>
+  <link rel="stylesheet" type="text/css" href="./styles/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="https://byui-wdd.github.io/wdd130/rafting_images/dryoarlogo.png" alt="Company Logo", style="width: 100px;">
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./faq.html">FaQ</a></li>
+          <li><a href="./site-plan-rafting.html">Site Plan</a></li>
+          <li><a href="./contact-us.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="contact">
+    <div class="contact-container">
+      <h1>Contact Us</h1>
+      <p>Have a question or need assistance? Reach out to us using the form below.</p>
+      <form action="submit_contact_form.php" method="POST">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-left">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./faq.html">FaQ</a></li>
+        <li><a href="./site-plan-rafting.html">Site Plan</a></li>
+        <li><a href="./contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-right">
+      <div class="social-media-icons">
+        <a href="#"><img src="./images/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="./images/twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="./images/instagram.png" alt="Instagram"></a>
+      </div>
+    </div>
+    <p>&copy; 2023 Dry Oar. All rights reserved.</p>
+  </footer>
+</body>
+</html>
