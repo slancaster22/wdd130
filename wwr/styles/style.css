@@ -332,9 +332,18 @@ footer {
   color: var(--headline-color-on-color);
 }
 
-.faq-item p {
+.faq-item p,
+.faq-item ul li {
   font-size: 18px;
   color: var(--paragraph-color-on-color);
+}
+
+.faq-item ul {
+  margin: 10px;
+}
+
+.faq-item ul li {
+  margin-left: 50px;
 }
 
 .faq-item a {
@@ -343,6 +352,3 @@ footer {
   font-weight: bold;
 }
 
-.faq-item a:hover {
-  color: var(--secondary-color);
-}
