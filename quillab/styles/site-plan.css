@@ -5,10 +5,10 @@ Fonts are separated by a | */
 
 :root {
   /* change the values below to your colors from your palette */
-  --primary-color: #607196   ;
-  --secondary-color: #BABFD1 ;
-  --accent1-color: #FFC759;
-  --accent2-color: FF7B9C;
+  --primary-color: #1f1f1f   ;
+  --secondary-color: #2a2a2a ;
+  --accent1-color: #f09328;
+  --accent2-color: #c76e09;
 
   /* change the values below to your chosen font(s) */
   --heading-font: 'Montserrat', sans-serif;
