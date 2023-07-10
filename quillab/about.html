@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quillab | About</title>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+  <!--HEADER-->
+  <header>
+    <nav>
+      <ul class="header-options-left">
+
+        <li><a class="link" href="./"><h1>quillab</h1></a></li>
+
+        <li class="dropdown">
+          <h2>Generators ⏷</h2>
+          <div class="dropdown-container">
+            <ul class="dropdown-content">
+              <li><a class="link" href="./generators"><b>Generators Home</b></a></li>
+              <li><a class="link" href="./generators/character-generator">Character Generator</a></li>
+              <!-- Add more generator links here -->
+            </ul>
+          </div>
+        </li>
+        
+        <li class="dropdown" class="link" href="./generators">
+          <h2>Tools ⏷</h2>
+          <div class="dropdown-container">
+            <ul class="dropdown-content">
+              <li><a class="link" href="./tools"><b>Tools Home</b></a></li>
+              <!-- Add more generator links here -->
+            </ul>
+          </div>
+        </li>
+        
+        <li class="dropdown">
+          <h2>Resources ⏷</h2>
+          <div class="dropdown-container">
+            <ul class="dropdown-content">
+              <li><a class="link" href="./resources"><b>Resources Home</b></a></li>
+              <li><a class="link" href="./resources/brandon-sanderson/writing-lectures-2020">Sci-Fi and Fantasy Writing Lectures</a></li>
+              <!-- Add more generator links here -->
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <ul class="header-options-right">
+        <li><a class="link" href="./about"><h2>About</h2></a></li>
+        <li><a class="link" href="./contactus"><h2>Contact Us</h2></a></li>
+        <li><img src="./images/light-mode.png" class="icon-button" onclick="toggleTheme()"></li>
+      </ul>
+    </nav>
+    <script>
+      var element = document.body;
+      
+      if (localStorage.getItem("theme") === "light-mode")
+      {
+        element.classList.toggle("light-mode");
+        console.log("Set theme at startup");
+      } else
+      {
+        localStorage.setItem("theme", "dark-mode");
+        console.log("Set Theme to Dark Mode");
+      }
+
+      function toggleTheme() {
+        element.classList.toggle("light-mode");
+
+        if (localStorage.getItem("theme") === "dark-mode")
+        {
+          localStorage.setItem("theme", "light-mode");
+          console.log("Set Theme to Light Mode");
+        } else
+        {
+          localStorage.setItem("theme", "dark-mode");
+          console.log("Set Theme to Dark Mode");
+        }
+      }
+    </script>
+  </header>
+  
+  <!--BODY-->
+  <div class="centered-container">
+    <h1 class="page-title">About Quillab</h1>
+    <div class="box-container-left">
+      <h2>Unlock Your Creativity</h2>
+      <p>
+        Quillab is a creative platform dedicated to providing writers, role-players, and storytellers with a suite of powerful tools and generators. We believe that imagination and storytelling go hand in hand, and our mission is to empower creators to bring their worlds and characters to life.
+      </p>
+    </div>
+      
+    <div class="box-container-right">
+      <h2>A Suite of Powerful Tools</h2>
+      <p>
+        Our collection of generators and tools offers a wide range of possibilities for writers and role-players alike. Whether you're crafting a fantasy novel, designing a tabletop role-playing campaign, or exploring a new universe, Quillab has you covered.
+      </p>
+      <ul style="margin: 20px 0;">
+        <a href="./character-generator" class="button-link">Explore Generators</a>
+        <a href="./character-generator" class="button-link">Explore Tools</a>
+      </ul>
+    </div>
+      
+    <div class="box-container-left">
+      <h2>Character Generator: Bringing Characters to Life</h2>
+      <p>
+        Our flagship Character Generator allows you to effortlessly create unique and dynamic characters, complete with detailed physical traits, personality traits, backgrounds, and more. Dive into the rich tapestry of your character's life and let their story unfold.
+      </p>
+      <ul style="margin: 20px 0px;">
+        <a href="./character-generator" class="button-link">Try it Out</a>
+      </ul>
+    </div>
+      
+    <div class="box-container-right">
+      <h2>Expanding Offerings: New Tools and Generators</h2>
+      <p>
+        In addition to our Character Generator, we're continuously expanding our offerings with new tools and generators. From world-building tools to plot generators, we aim to provide you with the resources you need to fuel your creativity and ignite your storytelling prowess.
+      </p>
+      <ul style="margin: 20px 0px;">
+        <a href="./character-generator" class="button-link">Check Out Updates</a>
+      </ul>
+    </div>
+      
+    <div class="box-container-left">
+      <h2>Join Our Community</h2>
+      <p>
+        At Quillab, we believe that every story deserves to be told, and we're here to support you every step of the way. Join our community of passionate storytellers, unlock your imagination, and embark on an unforgettable journey of creation.
+      </p>
+    </div>
+</div>
+
+  <footer>
+    &copy; 2023 Quillab. All rights reserved.
+  </footer>
+</body>
+</html>

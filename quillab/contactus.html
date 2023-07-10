@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Quillab | Contact Us</title>
+  <link rel="icon" type="image/png" href="images/icon.png">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <!--HEADER-->
+  <header>
+    <nav>
+      <ul class="header-options-left">
+
+        <li><a class="link" href="./"><h1>quillab</h1></a></li>
+
+        <li class="dropdown">
+          <h2>Generators ⏷</h2>
+          <div class="dropdown-container">
+            <ul class="dropdown-content">
+              <li><a class="link" href="./generators"><b>Generators Home</b></a></li>
+              <li><a class="link" href="./generators/character-generator">Character Generator</a></li>
+              <!-- Add more generator links here -->
+            </ul>
+          </div>
+        </li>
+        
+        <li class="dropdown" class="link" href="./generators">
+          <h2>Tools ⏷</h2>
+          <div class="dropdown-container">
+            <ul class="dropdown-content">
+              <li><a class="link" href="./tools"><b>Tools Home</b></a></li>
+              <!-- Add more generator links here -->
+            </ul>
+          </div>
+        </li>
+        
+        <li class="dropdown">
+          <h2>Resources ⏷</h2>
+          <div class="dropdown-container">
+            <ul class="dropdown-content">
+              <li><a class="link" href="./resources"><b>Resources Home</b></a></li>
+              <li><a class="link" href="./resources/brandon-sanderson/writing-lectures-2020">Sci-Fi and Fantasy Writing Lectures</a></li>
+              <!-- Add more generator links here -->
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <ul class="header-options-right">
+        <li><a class="link" href="./about"><h2>About</h2></a></li>
+        <li><a class="link" href="./contactus"><h2>Contact Us</h2></a></li>
+        <li><img src="./images/light-mode.png" class="icon-button" onclick="toggleTheme()"></li>
+      </ul>
+    </nav>
+    <script>
+      var element = document.body;
+      
+      if (localStorage.getItem("theme") === "light-mode")
+      {
+        element.classList.toggle("light-mode");
+        console.log("Set theme at startup");
+      } else
+      {
+        localStorage.setItem("theme", "dark-mode");
+        console.log("Set Theme to Dark Mode");
+      }
+
+      function toggleTheme() {
+        element.classList.toggle("light-mode");
+
+        if (localStorage.getItem("theme") === "dark-mode")
+        {
+          localStorage.setItem("theme", "light-mode");
+          console.log("Set Theme to Light Mode");
+        } else
+        {
+          localStorage.setItem("theme", "dark-mode");
+          console.log("Set Theme to Dark Mode");
+        }
+      }
+    </script>
+  </header>
+  
+  <!--BODY-->
+  <div class="centered-container">
+    <h1 class="page-title">Contact Us</h1>
+
+    <section class="box-container">
+        <div id="feedback"></div>
+        <form action="/my-handling-form-page" method="post">
+            <ul>
+              <li>
+                <label for="name">Name:</label>
+              </li>
+              <li>
+                <input type="text" id="name" name="user_name" placeholder="John Doe"/>
+              </li>
+              <li>
+                <label for="mail">Email:</label>
+              </li>
+              <li>
+                <input type="email" id="mail" name="user_email" placeholder="johndoe@email.com"/>
+              </li>
+              <li>
+                <label for="msg">Message:</label>
+              </li>
+              <li>
+                <textarea id="msg" name="user_message" placeholder="Insert message here"></textarea>
+              </li>
+              <li>
+                <button type="submit" class="button">Send your message</button>
+              </li>
+            </ul>
+          </form>
+    </section>
+    <script>
+        // get the feedback div element so we can do something with it.
+        const feedbackElement = document.getElementById('feedback');
+        // get the form so we can read what was entered in it.
+        const formElement = document.forms[0];
+        // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+        formElement.addEventListener('submit', function(e) {
+            // stop the form from doing the default action.
+            e.preventDefault();
+            // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+            feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+            // make the feedback element visible.
+            feedbackElement.style.display = "block";
+            // add a class to move everything down so our message doesn't cover it.
+            document.body.classList.toggle('moveDown');
+        });
+    </script>
+    
+  </div>
+
+<footer>
+  &copy; 2023 Quillab. All rights reserved.
+</footer>
+</body>
+</html>
