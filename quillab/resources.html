@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Quillab | Resources</title>
+  <link rel="icon" type="image/png" href="./images/icon.png">
+  <link rel="stylesheet" href="./styles/style.css">
+  <script src="rotd.js"></script>
+</head>
+
+<body>
+  <!--HEADER-->
+  <header>
+    <nav>
+      <ul class="header-options-left">
+
+        <li><a class="link" href="../"><h1>quillab</h1></a></li>
+
+        <li class="dropdown">
+          <h2>Generators ⏷</h2>
+          <div class="dropdown-container">
+            <ul class="dropdown-content">
+              <li><a class="link" href="./generators"><b>Generators Home</b></a></li>
+              <li><a class="link" href="./generators/character-generator">Character Generator</a></li>
+              <!-- Add more generator links here -->
+            </ul>
+          </div>
+        </li>
+        
+        <li class="dropdown" class="link" href="./generators">
+          <h2>Tools ⏷</h2>
+          <div class="dropdown-container">
+            <ul class="dropdown-content">
+              <li><a class="link" href="./tools"><b>Tools Home</b></a></li>
+              <!-- Add more generator links here -->
+            </ul>
+          </div>
+        </li>
+        
+        <li class="dropdown">
+          <h2>Resources ⏷</h2>
+          <div class="dropdown-container">
+            <ul class="dropdown-content">
+              <li><a class="link" href="./resources"><b>Resources Home</b></a></li>
+              <li><a class="link" href="./resources/brandon-sanderson/writing-lectures-2020">Sci-Fi and Fantasy Writing Lectures</a></li>
+              <!-- Add more generator links here -->
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <ul class="header-options-right">
+        <li><a class="link" href="./about"><h2>About</h2></a></li>
+        <li><img src="./images/light-mode.png" class="icon-button" onclick="toggleTheme()"></li>
+      </ul>
+    </nav>
+    <script>
+      var element = document.body;
+      
+      if (localStorage.getItem("theme") === "light-mode")
+      {
+        element.classList.toggle("light-mode");
+        console.log("Set theme at startup");
+      } else
+      {
+        localStorage.setItem("theme", "dark-mode");
+        console.log("Set Theme to Dark Mode");
+      }
+
+      function toggleTheme() {
+        element.classList.toggle("light-mode");
+
+        if (localStorage.getItem("theme") === "dark-mode")
+        {
+          localStorage.setItem("theme", "light-mode");
+          console.log("Set Theme to Light Mode");
+        } else
+        {
+          localStorage.setItem("theme", "dark-mode");
+          console.log("Set Theme to Dark Mode");
+        }
+      }
+    </script>
+  </header>
+  
+  <!--BODY-->
+  <div class="centered-container">
+    <section class="hero-section" style="background-image: url(../images/resources_hero.png);">
+      <h1 style="color: white;">Resources</h1>
+      <p style="color: white;">Explore a wealth of knowledge through our diverse collection of resources.</p>
+    </section>
+
+    <section class="split-container">
+        <div class="section-left">
+            <p id="rotd-date" style="margin-bottom: 10px;"></p>
+            <h1>Resource of the Day</h1>
+            <p>A new Featured Resource every day!</p>
+        </div>
+        <div class="section-right" id="rotd" style="background-blend-mode: overlay; background-size: 105% auto; background-position-y: top;">
+            <p id="rotd-series" style="margin-bottom: 10px;"></p>
+            <h2 id="rotd-title"></h2>
+            <p id="rotd-content"></p>
+            <p id="rotd-author" class="subtle"></p>
+            <div style="margin: 20px 0;">
+                <a href="#" class="button-link" id="rotd-link">Explore Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="box-container">
+        <h2>About Resources</h2>
+        <p>The Resources page serves as a valuable hub for a variety of educational materials, including videos and essays. It offers a curated selection of insightful content aimed at expanding your knowledge on various subjects. Whether you're interested in watching informative videos or diving into thought-provoking essays, this page provides a collection of resources designed to cater to different learning preferences. Explore a diverse range of topics and access materials that can enhance your understanding and support your learning journey. Discover valuable resources that can broaden your perspectives and deepen your knowledge in an easily accessible format.</p>
+    </section>
+
+    <section class="feature-section">
+      <div class="feature-card-link">
+        <h3>Articles</h3>
+        <p>Explore a diverse collection of informative articles written by experts in various fields, offering valuable insights and expanding your understanding on a wide range of topics.</p>
+      </div>
+      <div class="feature-card-link">
+        <h3>Videos</h3>
+        <p>Engage in an immersive visual experience through a curated selection of captivating videos, where stories unfold and ideas are visually conveyed with depth and creativity.</p>
+      </div>
+      <div class="feature-card-link">
+        <h3>Links</h3>
+        <p>Discover a curated compilation of valuable resources and relevant links, providing access to a wealth of information, inspiration, and communities that align with your interests and passions.</p>
+      </div>
+    </section>
+    
+  </div>
+
+  <footer>
+    &copy; 2023 Quillab. All rights reserved.
+  </footer>
+</body>
+</html>
