@@ -55,7 +55,8 @@ body {
 █▀█ ██▄ █▀█ █▄▀ ██▄ █▀▄
 */
 
-header {
+header,
+footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -68,19 +69,28 @@ header {
   box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.2);
 }
 
-header h1 {
+/* Footer */
+footer {
+  position: relative;
+  width: 98.6666%;
+}
+
+header h1,
+footer h1 {
   font-size: 24px;
   color: var(--text);
   margin: 0;
 }
 
-header h2 {
+header h2,
+footer h2 {
   font-size: 16px;
   color: var(--text);
   margin: 0;
 }
 
-header nav {
+header nav,
+footer nav {
   width: 100%;
   display: flex;
   align-items: center;
@@ -121,7 +131,10 @@ header nav {
 
 header a:hover,
 header h1:hover,
-header h2:hover {
+header h2:hover,
+footer a:hover,
+footer h1:hover,
+footer h2:hover {
   color: var(--text-hover);
 }
 
@@ -283,7 +296,7 @@ li {
 .centered-container {
   justify-content: center;
   text-align: center;
-  padding: 5% 5% 80px 5%;
+  padding: 5% 5% 10px 5%;
   justify-content: space-between;
 }
 
@@ -374,15 +387,6 @@ button:active {
   filter: invert(0.424);
 }
 
-/* Footer */
-footer {
-  font-size: 12px;
-  text-align: center;
-  opacity: 0.5;
-  width: 100%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
 
 /* Generator Container */
 .box-container,
