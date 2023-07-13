@@ -365,7 +365,6 @@ button:active {
   cursor: pointer;
   text-decoration: none;
   box-shadow: none;
-  background-color: none;
 }
 
 .icon-button:hover {
@@ -380,7 +379,6 @@ button:active {
   cursor: pointer;
   text-decoration: none;
   box-shadow: none;
-  background-color: none;
 }
  
 .light-mode .icon-button:hover {
@@ -412,13 +410,13 @@ button:active {
 }
 
 .box-container-left {
-  width: 90% auto;
+  width: auto;
   margin-left: 10%;
   text-align: left;
 }
 
 .box-container-right {
-  width: 90% auto;
+  width: auto;
   margin-right: 10%;
   text-align: right;
 }
